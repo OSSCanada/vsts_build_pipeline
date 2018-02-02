@@ -17,11 +17,12 @@ In this section we will be creating a new Git-based Project in VSTS. This will b
 * Make sure **Version control** is set to **Git**, should be the default.
 * Make sure **Work item process** is set to **Agile**, again, should be the default.
 * Click **Create** button.
+* ![empty process](images/create_project.png)
 
 3. Note Git Endpoint
 
 * Once the Project has been created you will see a getting started page.
-* Note the Git Url, it should look like: http://<VSTS_ACCOUNT_NAME>.visualstudio.com/_git/akspipeline
+* Note the Git Url, it should look like: ```http://<VSTS_ACCOUNT_NAME>.visualstudio.com/_git/akspipeline```
 
 ## Exercise 2 - Add App Code to VSTS Project
 
@@ -68,6 +69,7 @@ IMAGE GOES HERE
 
 * Once verifying the defaults, click **Continue**.
 * Select **Empty Process**.
+* ![empty process](images/empty_process.png)
 
 2. Set Correct Agent Queue
 
