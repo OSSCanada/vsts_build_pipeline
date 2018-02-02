@@ -61,19 +61,11 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 * A new browsing tab will have opened and you can look at the progress of the release. If it is green then all is good. If it is **red** then click on the **Deployment Status** to see a summary and logs of the errors.
 * Troubleshoot the release using the **Logs** navigation itme, fix the errors, kick off a new release.
 
-6. Kick off New Release
-
-* Click on the **+ Release** link in the upper right-hand corner and select **Create release**.
-* Click the **Create** button to kick off the release process.
-* You will see a new Release  with a number link near the upper left-hand corner, click on that release number.
-* A new browsing tab will have opened and you can look at the progress of the release. If it is green then all is good. If it is **red** then click on the **Deployment Status** to see a summary and logs of the errors.
-* Troubleshoot the release using the **Logs** navigation itme, fix the errors, kick off a new release.
-
-7. Repeat Step 4 for the Web and API Containers.
+6. Repeat Step 4 for the Web and API Containers.
 
 * Hint: You will need 3 more Kubernetes Tasks. The first to apply the web and api containers use the yaml file. The second and third tasks to update the web and api images on the cluster.
 
-8. Kick off Another Release
+7. Kick off Another Release
 
 * **The only difference in this one versus the one above is that all of the Containers are now being deployed.**
 * Click on the **+ Release** link in the upper right-hand corner and select **Create release**.
@@ -82,7 +74,7 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 * A new browsing tab will have opened and you can look at the progress of the release. If it is green then all is good. If it is **red** then click on the **Deployment Status** to see a summary and logs of the errors.
 * Troubleshoot the release using the **Logs** navigation itme, fix the errors, kick off a new release.
 
-9. Trigger Continuous Deployment
+8. Trigger Continuous Deployment
 
 * Now that we have all of the kinks worked out in our release, let's have it automatically trigger upon a successful build.
 * Hover over the **Build and Release** menu navigation at the top and select **Releases**.
