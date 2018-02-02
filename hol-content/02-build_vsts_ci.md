@@ -37,9 +37,9 @@ Please note it is possible to setup VSTS to leverage other source control reposi
 * We will be using the Justice League App folder from the following repository: http://github.com/azure/blackbelt-aks-hackfest
 * If you do not already have the repository cloned, please clone it to your local computer.
 * Create a new Repo directory on your computer called **justiceleagueapp**.
-* Copy the App folder from the Repo above into the newly created **justiceleagueapp** folder.
+* Copy the **app** and **helper-files** folders from the Repo above into the newly created **justiceleagueapp** folder.
 * Open that newly created directory using VS Code.
-* Add a **.gitignore** file to the Repo. Copy and paste the contents from [here](.gitignore).
+* Add a **.gitignore** file to the Repo. Copy and paste the contents from [here](../.gitignore).
 * Using the **Source Control** navigation option in VS Code on the left-hand side, Initialize the local Repo.
 * Once initialized, add all the files to the Repo by entering a Comment such as **Initial commit.** and then click on the **checkmark** at the top of the window.
 * You now have a local Git Repo, next step is to push it up to VSTS.
@@ -61,7 +61,7 @@ git push -u origin --all
 1. Create Empty Build Pipeline
 
 * Hover over the **Build and Release** navigation item near the top of the VSTS window. You will see a list of drop-down options, click on **Builds**.
-* Click on **+ New definition** to create a new build.
+* Click on **+ New definition** to create a new Build.
 * All the defaults should be correct.
 
 IMAGE GOES HERE
@@ -109,12 +109,39 @@ IMAGE GOES HERE
     * Qualify Image Name:   Ensure it is Checked
     * Additional Image Tags:   (LEAVE BLANK)
     * Leave the rest as the defaults.
-* After completing the above, click on the **Save & queue** button near the top right. A window will pop-up, leave the defaults and hit the **save & queue** button to start the build.
 
 IMAGE GOES HERE
 
-5. Repeat Steps 3 and 4 Above for Web and API Containers
+* After completing the above, click on the **Save & queue** button near the top right. A window will pop-up, leave the defaults and hit the **save & queue** button to start the build.
+
+5. Validate Successful Build
+
+* After clicking on the save & queue button above, you will see a message near the top of the page that a new build has been kicked off with a number. Clicking on that number will take you to the build run and show you the progress.
+* A successful run is **green**. If there is **red** it means the build failed. Use the build run output to troubleshoot errors, fix the errors, and then run another build.
+
+6. Repeat Steps 3 and 4 Above for Web and API Containers
 
 * Hint: You will need to add 4 more Docker Tasks, 2 each for API and Web.
 * Hint: Remember to select the correct **Docker File** associated to each part of the app.
 * Hint: Don't forget to ensure you change the **Image Name** associated to each part of the app.
+
+7. Add Artifacts to Build Output
+
+* The next step is to add Publish Output steps to the pipeline. This is done by clicking on the **+** next to **Phase 1**, entering **publish** in the search box, hover over the **Publish Build Artifacts** task, then hit the **Add** button.
+* Click on the **Publish Artifact** task and update the following:
+    * Display name:   Publish Yaml
+    * Path to Publish:   Use the ... on the right-hand side to select the **helper-files** folder
+    * Artifact Name:   yaml
+    * Artifact publish location:   Visual Studio Team Services/TFS
+* After completing the above, click on the **Save & queue** button near the top right. A window will pop-up, leave the defaults and hit the **save & queue** button to start the build.
+
+8. Enable Continuous Integration
+
+* To enable Continuous Integration, meaning that everytime your code is checked in a build will run, click on **Triggers** just above the Process bar.
+* Click the **Enable continuous integration** checkbox.
+* Click the **Save & queue** button in the top right and select **Save** from the drop-down to save your changes.
+* You are done, now wasn't that easy.
+
+## Summary
+
+At this point you should have a fully functioning CI process that builds all 3 Container Images (Web, API, DB) as well as pushing all 3 Container Images (Web, API, DB) to Azure Container Registry. Now you are ready to build the Release Pipeline and release the build to AKS.
