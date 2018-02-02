@@ -60,8 +60,6 @@ git push -u origin --all
 
 ## Exercise 3 - Create Build Pipeline
 
-![Process Gif](https://thumbs.gfycat.com/IllegalBouncyAtlanticridleyturtle-max-14mb.gif)
-
 1. Create Empty Build Pipeline
 
 * Hover over the **Build and Release** navigation item near the top of the VSTS window. You will see a list of drop-down options, click on **Builds**.
