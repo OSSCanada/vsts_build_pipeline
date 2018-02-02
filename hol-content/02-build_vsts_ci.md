@@ -88,33 +88,33 @@ IMAGE GOES HERE
   * This will add two "Docker Tasks" to your "Phase 1" Agent Phase
 * ![add docker tasks](images/add_docker_task.png)
 
-IMAGE GOES HERE
-
 4. Configure Docker Build and Push DB Tasks
 
-* In this step we will be configuring the automated build of the Container Image for the database portion of the application.
-* Click on the first of the 2 Docker Tasks.
-    * Display name:   Build API Image
-    * Container Registry Type:   Azure Container Registry
-    * Azure Subscription:   Choose Azure Subscription
-    * Azure Container Registry:   Select from drop-down
-    * Action:   Build an image
-    * Docker File:   Choose file using the ... select menu on the right
-    * Build Arguments:   (LEAVE BLANK)
-    * Use Default Build Context:   Ensure it is Checked
-    * Image Name:   <ACR_NAME>.azurecr.io/azureworkshop/rating-api:$(Build.BuildId)
-    * Qualify Image Name:   Ensure it is Checked
-    * Additional Image Tags:   (LEAVE BLANK)
+In this step we will be configuring the automated build of the Container Image for the database portion of the application.
+
+* Click on the first of the two (2) Docker Tasks, and modify the following fields and values:
+    * ***Display name:*** ```Build API Image```
+    * ***Container Registry Type:*** ```Azure Container Registry```
+    * ***Azure Subscription:*** ```Choose Azure Subscription```
+    * ***Azure Container Registry:*** ```Select from drop-down```
+    * ***Action:*** ```Build an image```
+    * ***Docker File:*** ```Choose file using the ... select menu on the right```
+    * ***Build Arguments:*** ```(LEAVE BLANK)```
+    * ***Use Default Build Context:*** ```Ensure it is Checked```
+    * ***Image Name:*** ```<ACR_NAME>.azurecr.io/azureworkshop/rating-api:$(Build.BuildId)```
+    * ***Qualify Image Name:*** ```Ensure it is Checked```
+    * ***Additional Image Tags:*** ```(LEAVE BLANK)```
     * Leave the rest as the defaults.
-* Click on the second of the 2 Docker Tasks.
-    * Display name:   Push API Image
-    * Container Registry Type:   Azure Container Registry
-    * Azure Subscription:   Choose Azure Subscription
-    * Azure Container Registry:   Select from drop-down
-    * Action:   Push an image
-    * Image Name:   <ACR_NAME>.azurecr.io/azureworkshop/rating-api:$(Build.BuildId)
-    * Qualify Image Name:   Ensure it is Checked
-    * Additional Image Tags:   (LEAVE BLANK)
+
+* Click on the second of the two (2) Docker Tasks, and modify the following fields and values:
+    * ***Display name:*** ```Push API Image```
+    * ***Container Registry Type:*** ```Azure Container Registry```
+    * ***Azure Subscription:*** ```Choose Azure Subscription```
+    * ***Azure Container Registry:*** ```Select from drop-down```
+    * ***Action:*** ```Push an image```
+    * ***Image Name:*** ```<ACR_NAME>.azurecr.io/azureworkshop/rating-api:$(Build.BuildId)```
+    * ***Qualify Image Name:*** ```Ensure it is Checked```
+    * ***Additional Image Tags:*** ```(LEAVE BLANK)```
     * Leave the rest as the defaults.
 
 IMAGE GOES HERE
