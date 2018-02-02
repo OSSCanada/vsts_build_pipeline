@@ -76,14 +76,17 @@ IMAGE GOES HERE
 
 * Note the default pipeline name, **akspipeline-CI**, you can choose to keep the default or name it somethign new.
 * Under the **Agent queue**, be sure the **Hosted Linux Preview** option is selected from the drop-down menu. This represents the type of build machine that is being used.
+* ![build_agent](images/build_agent.png)
 
 3. Validate Sources and add two (2) Docker Tasks
 
 * If you click on **Get sources** on the left you will notice that it is pointing to your VSTS Project Repo. If not, you have done something wrong, please re-visit previous steps.
+* ![get sources](images/get_sources.png)
 * Next, click on the **Phase 1** link on the left-hand side. You will notice that this Build Agent Phase automatically inherits the type of Build Agent from the Parent Build Process.
 * You can change the **Display name** or leave it as is, up to you.
 * The next step is to add Docker Build and Docker Push steps to the pipeline. This is done by clicking on the **+** next to **Phase 1**, entering **docker** in the search box, hover over the **Docker** taks, then hit the **Add** button twice.
   * This will add two "Docker Tasks" to your "Phase 1" Agent Phase
+* ![add docker tasks](images/add_docker_task.png)
 
 IMAGE GOES HERE
 
