@@ -59,7 +59,7 @@ git push -u origin --all
 * At this point you should have all of your code in VSTS Source Control. Click on the **Code** navigation item near the top of the VSTS window to see your checked in code.
 
 ## Exercise 3 - Create Build Pipeline
-![](https://thumbs.gfycat.com/IllegalBouncyAtlanticridleyturtle-size_restricted.gif | width=100)
+<img src="https://thumbs.gfycat.com/IllegalBouncyAtlanticridleyturtle-size_restricted.gif" data-canonical-src="https://thumbs.gfycat.com/IllegalBouncyAtlanticridleyturtle-size_restricted.gif" width="800" />
 
 1. Create Empty Build Pipeline
 
