@@ -60,7 +60,7 @@ git push -u origin --all
 
 ## Exercise 3 - Create Build Pipeline
 
-![Process Gif](https://thumbs.gfycat.com/IllegalBouncyAtlanticridleyturtle-size_restricted.gif)
+![Process Gif](https://thumbs.gfycat.com/IllegalBouncyAtlanticridleyturtle-max-14mb.gif)
 
 1. Create Empty Build Pipeline
 
