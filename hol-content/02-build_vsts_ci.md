@@ -6,11 +6,11 @@ In this portion of the lab we will be creating the Continuous Integration (CI) p
 
 In this section we will be creating a new Git-based Project in VSTS. This will be used as source control for our project as well as building out the CI and CD Pipelines.
 
-1. Navigate to your VSTS Account
+1. **Navigate to your VSTS Account**
 
 * It will look similar to the following depending on what you setup in Lab 1: http://<VSTS_ACCOUNT_NAME>.visualstudio.com
 
-2. Create a New Project
+2. **Create a New Project**
 
 * Click on the **New Project** button.
 * Enter **akspipeline** for the Project name.
@@ -19,7 +19,7 @@ In this section we will be creating a new Git-based Project in VSTS. This will b
 * Click **Create** button.
 * ![empty process](images/create_project.png)
 
-3. Note Git Endpoint
+3. **Note Git Endpoint**
 
 * Once the Project has been created you will see a getting started page.
 * Note the Git Url, it should look like: ```http://<VSTS_ACCOUNT_NAME>.visualstudio.com/_git/akspipeline```
@@ -28,12 +28,12 @@ In this section we will be creating a new Git-based Project in VSTS. This will b
 
 Please note it is possible to setup VSTS to leverage other source control repositories, that is not the main focus of this exercise. For the purposes of this lab we will be pushing existing code into VSTS to keep things simple.
 
-1. Note Getting Started Options
+1. **Note Getting Started Options**
 
 * As you can see there are a variety of ways to get started. You can clone to your computer, push existing, import, initialize or build code from external repository.
 * As noted above, we are going to push an existing repository. Click on the **or push an existing repository from command line** link to see the steps.
 
-2. Create New Local Repo
+2. **Create New Local Repo**
 
 * We will be using the Justice League App folder from the following repository: http://github.com/azure/blackbelt-aks-hackfest
 * If you do not already have the repository cloned, please clone it to your local computer.
@@ -46,7 +46,7 @@ Please note it is possible to setup VSTS to leverage other source control reposi
 * Once initialized, add all the files to the Repo by entering a Comment such as **Initial commit.** and then click on the **checkmark** at the top of the window.
 * You now have a local Git Repo, next step is to push it up to VSTS.
 
-3. Push Local Repo to VSTS
+3. **Push Local Repo to VSTS**
 
 * Now that you have a local Git Repo, we need to add VSTS as a Remote origin. To do this we will open the VS Code Terminal Window. This is done by hitting **Ctrl + ~** on teh keyboard.
 * Once at the command prompt, you are going to use the **or push an existing repository from command line** commands from Exercise 1 above.
@@ -60,7 +60,7 @@ git push -u origin --all
 
 ## Exercise 3 - Create Build Pipeline
 
-1. Create Empty Build Pipeline
+1. **Create Empty Build Pipeline**
 
 * Hover over the **Build and Release** navigation item near the top of the VSTS window. You will see a list of drop-down options, click on **Builds**.
 * Click on **+ New definition** to create a new Build.
@@ -72,13 +72,13 @@ IMAGE GOES HERE
 * Select **Empty Process**.
 * ![empty process](images/empty_process.png)
 
-2. Set Correct Agent Queue
+2. **Set Correct Agent Queue**
 
 * Note the default pipeline name, **akspipeline-CI**, you can choose to keep the default or name it somethign new.
 * Under the **Agent queue**, be sure the **Hosted Linux Preview** option is selected from the drop-down menu. This represents the type of build machine that is being used.
 * ![build_agent](images/build_agent.png)
 
-3. Validate Sources and add two (2) Docker Tasks
+3. **Validate Sources and add two (2) Docker Tasks**
 
 * If you click on **Get sources** on the left you will notice that it is pointing to your VSTS Project Repo. If not, you have done something wrong, please re-visit previous steps.
 * ![get sources](images/get_sources.png)
@@ -88,7 +88,7 @@ IMAGE GOES HERE
   * This will add two "Docker Tasks" to your "Phase 1" Agent Phase
 * ![add docker tasks](images/add_docker_task.png)
 
-4. Configure Docker Build and Push DB Tasks
+4. **Configure Docker Build and Push DB Tasks**
 
 In this step we will be configuring the automated build of the Container Image for the database portion of the application.
 
@@ -121,18 +121,18 @@ IMAGE GOES HERE
 
 * After completing the above, click on the **Save & queue** button near the top right. A window will pop-up, leave the defaults and hit the **save & queue** button to start the build.
 
-5. Validate Successful Build
+5. **Validate Successful Build**
 
 * After clicking on the save & queue button above, you will see a message near the top of the page that a new build has been kicked off with a number. Clicking on that number will take you to the build run and show you the progress.
 * A successful run is **green**. If there is **red** it means the build failed. Use the build run output to troubleshoot errors, fix the errors, and then run another build.
 
-6. Repeat Steps 3 and 4 Above for Web and API Containers
+6. **Repeat Steps 3 and 4 Above for Web and API Containers**
 
 * Hint: You will need to add 4 more Docker Tasks, 2 each for API and Web.
 * Hint: Remember to select the correct **Docker File** associated to each part of the app.
 * Hint: Don't forget to ensure you change the **Image Name** associated to each part of the app.
 
-7. Add Artifacts to Build Output
+7. **Add Artifacts to Build Output**
 
 * The next step is to add Publish Output steps to the pipeline. This is done by clicking on the **+** next to **Phase 1**, entering **publish** in the search box, hover over the **Publish Build Artifacts** task, then hit the **Add** button.
 * Click on the **Publish Artifact** task and update the following:
@@ -142,7 +142,7 @@ IMAGE GOES HERE
     * Artifact publish location:   Visual Studio Team Services/TFS
 * After completing the above, click on the **Save & queue** button near the top right. A window will pop-up, leave the defaults and hit the **save & queue** button to start the build.
 
-8. Enable Continuous Integration
+8. **Enable Continuous Integration**
 
 * To enable Continuous Integration, meaning that everytime your code is checked in a build will run, click on **Triggers** just above the Process bar.
 * Click the **Enable continuous integration** checkbox.
