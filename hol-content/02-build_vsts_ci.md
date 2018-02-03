@@ -128,18 +128,18 @@ IMAGE GOES HERE
 
 6. **Repeat Steps 3 and 4 Above for Web and API Containers**
 
-* Hint: You will need to add 4 more Docker Tasks, 2 each for API and Web.
-* Hint: Remember to select the correct **Docker File** associated to each part of the app.
-* Hint: Don't forget to ensure you change the **Image Name** associated to each part of the app.
+* ***Hint:*** You will need to add 4 more Docker Tasks, 2 each for API and Web.
+* ***Hint:*** Remember to select the correct **Docker File** associated to each part of the app.
+* ***Hint:*** Don't forget to ensure you change the **Image Name** associated to each part of the app.
 
 7. **Add Artifacts to Build Output**
 
 * The next step is to add Publish Output steps to the pipeline. This is done by clicking on the **+** next to **Phase 1**, entering **publish** in the search box, hover over the **Publish Build Artifacts** task, then hit the **Add** button.
 * Click on the **Publish Artifact** task and update the following:
-    * Display name:   Publish Yaml
-    * Path to Publish:   Use the ... on the right-hand side to select the **helper-files** folder
-    * Artifact Name:   yaml
-    * Artifact publish location:   Visual Studio Team Services/TFS
+    * ***Display name:*** Publish Yaml
+    * ***Path to Publish:***   Use the ```...``` (elipsis) on the right-hand side to select the **helper-files** folder
+    * ***Artifact Name:***   yaml
+    * ***Artifact publish location:***   Visual Studio Team Services/TFS
 * After completing the above, click on the **Save & queue** button near the top right. A window will pop-up, leave the defaults and hit the **save & queue** button to start the build.
 
 8. **Enable Continuous Integration**
