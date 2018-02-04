@@ -10,7 +10,14 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 * Click on **New definition** to create a new Release.
 * Enter **Kubernetes** in the search box.
 * Hover over the **Deploy to Kubernetes cluster** item and click on **Apply** twice to add two Kubernetes tasks.
-* Enter **K8s** in the search box.
+* Browse the VSTS Marketplace (we will install an extension from the marketplace)
+* ![marketplace](img/browse_marketplace.png)
+* Enter **K8s** in the search box, and click on the **Kubernetes Extension** by Tsuyoshi Ushio
+* ![search k8s](img/search_k8s.png)
+* click on **Get it Free**
+* ![get it free](img/get_it_free.png)
+* Install the extension into your VSTS account
+* ![install_extension](img/install_extension.png)
 * Hover over the **k8s downloader** item and click on **Add** once to add a kubectl downloader task.
 * Enter **bash** in the search box.
 * Hover over the **Shell Script** item and click on **Add** once to add a shell script execution task.
