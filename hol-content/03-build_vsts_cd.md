@@ -17,7 +17,7 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 * click on **Get it Free**
 * ![get it free](img/get_it_free.png)
 * Install the extension into your VSTS account
-* ![install_extension](img/install_extension.png)
+* ![install_extension](img/Install_extension.png)
 * Hover over the **k8s downloader** item and click on **Add** once to add a kubectl downloader task.
 * Enter **bash** in the search box.
 * Hover over the **Shell Script** item and click on **Add** once to add a shell script execution task.
