@@ -4,10 +4,10 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 
 ## Exercise 1 - Create Release Pipeline
 
-1. Create Empty Release Pipeline
+1. ***Create Empty Release Pipeline***
 
 * Hover over the **Build and Release** navigation item near the top of the VSTS window. You will see a list of drop-down options, click on **Releases**.
-* Click on **+ New definition** to create a new Release.
+* Click on **New definition** to create a new Release.
 * Enter **Kubernetes** in the search box.
 * Hover over the **Deploy to Kubernetes cluster** item and click on **Apply** twice to add two Kubernetes tasks.
 * Enter **K8s** in the search box.
@@ -16,7 +16,7 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 * Hover over the **Shell Script** item and click on **Add** once to add a shell script execution task.
 * You should now have 4 tasks under the **Agent phase**.
 
-2. Add Dev Environment
+2. ***Add Dev Environment***
 
 * Change the **Environment name** to **Dev**. Notice the visualization to the left was updated.
 
