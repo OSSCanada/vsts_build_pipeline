@@ -85,6 +85,8 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
     * Second Task Name:   Update K8s API Image
     * Third Task Name:   Update K8s WEB Image
 
+![empty process](img/vsts_completed_release.png)
+
 7. Kick off Another Release to Test Changes
 
 * **The only difference in this one versus the one above is that all of the Containers are now being deployed.**
@@ -101,8 +103,9 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 * On the left-hand side select your release definiton, it should be **K8S** if all the directions were followed correctly.
 * Once the release is selected, you should see an **Edit** button near the top, click it.
 * You should now see the pipeline diagram of your release. In the upper right-hand corner of the **akspipeline-CI** build artifact you will see a lightning bolt, click it.
-* In the windows that pops up, enable the trigger.
-* Now you have Continuous Deployment along with Continuous Integration now setup.
+* In the windows that pops up, enable the trigger. Now you have Continuous Deployment along with Continuous Integration now setup.
+
+![empty process](img/vsts_cd_trigger.png)
 
 ## Summary
 

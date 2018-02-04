@@ -17,7 +17,7 @@ In this section we will be creating a new Git-based Project in VSTS. This will b
 * Make sure **Version control** is set to **Git**, should be the default.
 * Make sure **Work item process** is set to **Agile**, again, should be the default.
 * Click **Create** button.
-* ![empty process](img/create_project.png)
+![empty process](img/create_project.png)
 
 3. **Note Git Endpoint**
 
@@ -41,10 +41,13 @@ Please note it is possible to setup VSTS to leverage other source control reposi
 * Create a new Repo directory on your computer called **justiceleagueapp**.
 * Copy the **app** and **helper-files** folders from the Repo above into the newly created **justiceleagueapp** folder.
 * Open that newly created directory using VS Code.
-* Add a **.gitignore** file to the Repo. Copy and paste the contents from [here](../.gitignore).
+* Add a **.gitignore** file to the Repo. Copy and paste the contents from [here](../helper-files/.gitignore).
+* We will be adding one new file to the Repo. It is a **databaseload.sh** script file to help us load the Mongo DB database as part of our Release pipeline. Copy and paste the content of the **databaseload.sh** file from [here](../helper-files/databaseload.sh) into a new file called **databaseload.sh** in the helper-files directory.
 * Using the **Source Control** navigation option in VS Code on the left-hand side, Initialize the local Repo.
 * Once initialized, add all the files to the Repo by entering a Comment such as **Initial commit.** and then click on the **checkmark** at the top of the window.
 * You now have a local Git Repo, next step is to push it up to VSTS.
+* ![empty process](img/jlapp_vscode.png)
+
 
 3. **Push Local Repo to VSTS**
 
@@ -57,6 +60,7 @@ git push -u origin --all
 ```
 
 * At this point you should have all of your code in VSTS Source Control. Click on the **Code** navigation item near the top of the VSTS window to see your checked in code.
+![empty process](img/vsts_code.png)
 
 ## Exercise 3 - Create Build Pipeline
 
@@ -65,28 +69,26 @@ git push -u origin --all
 * Hover over the **Build and Release** navigation item near the top of the VSTS window. You will see a list of drop-down options, click on **Builds**.
 * Click on **+ New definition** to create a new Build.
 * All the defaults should be correct.
-
-IMAGE GOES HERE
-
+![empty process](img/vsts_new_build.png)
 * Once verifying the defaults, click **Continue**.
 * Select **Empty Process**.
-* ![empty process](img/empty_process.png)
+![empty process](img/empty_process.png)
 
 2. **Set Correct Agent Queue**
 
 * Note the default pipeline name, **akspipeline-CI**, you can choose to keep the default or name it somethign new.
 * Under the **Agent queue**, be sure the **Hosted Linux Preview** option is selected from the drop-down menu. This represents the type of build machine that is being used.
-* ![build_agent](img/build_agent.png)
+![build_agent](img/build_agent.png)
 
 3. **Validate Sources and add two (2) Docker Tasks**
 
 * If you click on **Get sources** on the left you will notice that it is pointing to your VSTS Project Repo. If not, you have done something wrong, please re-visit previous steps.
-* ![get sources](img/get_sources.png)
+![get sources](img/get_sources.png)
 * Next, click on the **Phase 1** link on the left-hand side. You will notice that this Build Agent Phase automatically inherits the type of Build Agent from the Parent Build Process.
 * You can change the **Display name** or leave it as is, up to you.
 * The next step is to add Docker Build and Docker Push steps to the pipeline. This is done by clicking on the **+** next to **Phase 1**, entering **docker** in the search box, hover over the **Docker** taks, then hit the **Add** button twice.
   * This will add two "Docker Tasks" to your "Phase 1" Agent Phase
-* ![add docker tasks](img/add_docker_task.png)
+![add docker tasks](img/add_docker_task.png)
 
 4. **Configure Docker Build and Push DB Tasks**
 
@@ -105,7 +107,6 @@ In this step we will be configuring the automated build of the Container Image f
     * ***Qualify Image Name:*** ```Ensure it is Checked```
     * ***Additional Image Tags:*** ```(LEAVE BLANK)```
     * Leave the rest as the defaults.
-
 * Click on the second of the two (2) Docker Tasks, and modify the following fields and values:
     * ***Display name:*** ```Push API Image```
     * ***Container Registry Type:*** ```Azure Container Registry```
@@ -116,9 +117,6 @@ In this step we will be configuring the automated build of the Container Image f
     * ***Qualify Image Name:*** ```Ensure it is Checked```
     * ***Additional Image Tags:*** ```(LEAVE BLANK)```
     * Leave the rest as the defaults.
-
-IMAGE GOES HERE
-
 * After completing the above, click on the **Save & queue** button near the top right. A window will pop-up, leave the defaults and hit the **save & queue** button to start the build.
 
 5. **Validate Successful Build**
@@ -140,6 +138,7 @@ IMAGE GOES HERE
     * ***Path to Publish:***   Use the ```...``` (elipsis) on the right-hand side to select the **helper-files** folder
     * ***Artifact Name:***   yaml
     * ***Artifact publish location:***   Visual Studio Team Services/TFS
+![empty process](img/vsts_completed_build.png)
 * After completing the above, click on the **Save & queue** button near the top right. A window will pop-up, leave the defaults and hit the **save & queue** button to start the build.
 
 8. **Enable Continuous Integration**
@@ -148,6 +147,7 @@ IMAGE GOES HERE
 * Click the **Enable continuous integration** checkbox.
 * Click the **Save & queue** button in the top right and select **Save** from the drop-down to save your changes.
 * You are done, now wasn't that easy.
+![empty process](img/vsts_ci_trigger.png)
 
 ## Summary
 
