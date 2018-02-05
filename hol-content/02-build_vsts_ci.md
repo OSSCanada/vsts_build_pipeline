@@ -63,8 +63,8 @@ Please note it is possible to setup VSTS to leverage other source control reposi
     cp ~/Documents/blackbelt-aks-hackfest/linux-container/helper-files .
     ```
 * Open that newly created directory using VS Code.
-    * Change directory into the new **justiceleagueapp** folder (or whatever you named that directory)
-    * run ```:bash 
+    * Change directory into the new **justiceleagueapp** folder (or whatever you named that directory) 
+    ```:bash 
         # presuming you are in the directory ~/Documents/justiceleagueapp
 
         code .
