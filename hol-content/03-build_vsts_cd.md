@@ -7,10 +7,20 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 1. ***Create Empty Release Pipeline***
 
 * Hover over the **Build and Release** navigation item near the top of the VSTS window. You will see a list of drop-down options, click on **Releases**.
+* ![](img/new_release.png)
 * Click on **New definition** to create a new Release.
-* Enter **Kubernetes** in the search box.
-* Hover over the **Deploy to Kubernetes cluster** item and click on **Apply** twice to add two Kubernetes tasks.
-* Browse the VSTS Marketplace (we will install an extension from the marketplace)
+* ![](img/new_release_definition.png)
+* Enter **Kubernetes** in the search box, hover over the **Deploy to Kubernetes cluster** item and click on **Apply** to add a **Deploy to Kubernetes** task.
+* ![](img/add_kubernetes_task.png)
+* Name your new release pipline environment "**Dev**"
+* ![](img/name_environment.png)
+* Rename your release pipeline
+* ![](img/rename_release.png)
+* Let's add more tasks to your release pipeline by clicking the "**1 phase, 1 task**" link
+* ![](img/view_tasks.png)
+* We will now click on the "**+**" symbol next to Agent Phase to add an additional "**Deploy to Kubernetes**" task
+* ![](img/add_additional_kubernetes_task.png)
+* Next, browse the VSTS Marketplace (we will install an extension from the marketplace)
 * ![marketplace](img/browse_marketplace.png)
 * Enter **K8s** in the search box, and click on the **Kubernetes Extension** by Tsuyoshi Ushio
 * ![search k8s](img/search_k8s.png)
@@ -19,8 +29,9 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 * Install the extension into your VSTS account
 * ![install_extension](img/Install_extension.png)
 * Hover over the **k8s downloader** item and click on **Add** once to add a kubectl downloader task.
-* Enter **bash** in the search box.
-* Hover over the **Shell Script** item and click on **Add** once to add a shell script execution task.
+* ![](img/add_downloader_task.png)
+* Enter **bash** in the search box, then find the **Shell Script** item and click on **Add** to add a shell script execution task
+* ![](img/add_shell_task.png)
 * You should now have 4 tasks under the **Agent phase**.
 
 2. ***Add Dev Environment***
