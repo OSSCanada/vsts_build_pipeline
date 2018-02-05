@@ -2,6 +2,12 @@
 
 In this portion of the lab we will be creating the Continuous Deployment (CD) pipeline in VSTS.
 
+A CD pipeline allows us to define Release stages, which will deploy our app(s) to specific environments.  In this lab, we will be deploying only to a single Developement ("Dev") environment.  You can create multiple release stages, with each one targeting different enviroments (e.g. Development, Test, Produciton etc.).  
+
+A Release can consist of multiple phases, and each phase itself can/will have multiple tasks to run and execute.  We will be creating a Release with only a single phase, but with four (4) tasks to complete to deploy our applications from our previous [CI Build Pipeline](02-build_vsts_ci.md).
+
+At the end of this lab, we will automate the execution of our Continuous Deployment (CD) Release Pipeline, when a successful Continuous Integration (CI) Build Pipeline completes.  This will ensure that our environments will automatically deploy new updates as they happen, and only upon successful builds.
+
 ## Exercise 1 - Create Release Pipeline
 
 1. ***Create Empty Release Pipeline***

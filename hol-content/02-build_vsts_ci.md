@@ -2,6 +2,12 @@
 
 In this portion of the lab we will be creating the Continuous Integration (CI) pipeline in VSTS.
 
+A CI Pipeline allows us to define a Build Stage, which will allow us to automate the required steps to package our application code into their preferred runtime environments.  
+
+In this lab we will be pushing in new code to our Git Repository, which will then trigger the packaging of three (3) Applications - a Web frontend, an REST API backend and a Database Server - into three (3) separate Docker Container Images.
+
+Upon a successful build for each application, we will push the newly created Docker Image to an Azure Container Registry which will allow us to leverage these Images from a central location into multiple target environments (e.g. Dev, Test, Production).
+
 ## Exercise 1 - Create New Project in VSTS
 
 In this section we will be creating a new Git-based Project in VSTS. This will be used as source control for our project as well as building out the CI and CD Pipelines.
