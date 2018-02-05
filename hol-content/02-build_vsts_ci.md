@@ -45,12 +45,31 @@ Please note it is possible to setup VSTS to leverage other source control reposi
 
 * We will be using the Justice League App folder from the following repository: http://github.com/azure/blackbelt-aks-hackfest
 * If you do not already have the repository cloned, please clone it to your local computer.
-  * ````git clone git@github.com:Azure/blackbelt-aks-hackfest.git````
+
+  * ````:bash
+    cd ~/Documents
+    git clone git@github.com:Azure/blackbelt-aks-hackfest.git
+    ````
 * Create a new Repo directory on your computer called **justiceleagueapp**.
+* ```:bash
+    cd ~/Documents
+    mkdir justiceleagueapp
+    cd justiceleagueapp
+    ```
 * Copy the **app** and **helper-files** folders from the Repo above into the newly created **justiceleagueapp** folder.
+* ```:bash
+    cd ~/Documents/justiceleagueapp
+    cp ~/Documents/blackbelt-aks-hackfest/linux-container/app .
+    cp ~/Documents/blackbelt-aks-hackfest/linux-container/helper-files .
+    ```
 * Open that newly created directory using VS Code.
     * Change directory into the new **justiceleagueapp** folder (or whatever you named that directory)
-    * run ```code .``` (=> code "dot"/"period") to launch the app directory in VSCode to start editing files 
+    * run ```:bash 
+        # presuming you are in the directory ~/Documents/justiceleagueapp
+
+        code .
+        # (=> code "dot"/"period") to launch current app directory in VSCode to start editing files 
+    ``` 
 * Add a **.gitignore** file to the Repo. Copy and paste the contents from [here](../helper-files/.gitignore).
 * We will be adding one new file to the Repo. It is a **databaseload.sh** script file to help us load the Mongo DB database as part of our Release pipeline. Copy and paste the content of the **databaseload.sh** file from [here](../helper-files/databaseload.sh) into a new file called **databaseload.sh** in the helper-files directory.
 * Using the **Source Control** navigation option in VS Code on the left-hand side, Initialize the local Repo.
