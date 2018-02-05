@@ -8,6 +8,8 @@ A Release can consist of multiple phases, and each phase itself can/will have mu
 
 At the end of this lab, we will automate the execution of our Continuous Deployment (CD) Release Pipeline, when a successful Continuous Integration (CI) Build Pipeline completes.  This will ensure that our environments will automatically deploy new updates as they happen, and only upon successful builds.
 
+![release_workflow](img/release_workflow.png)
+
 ## Exercise 1 - Create Release Pipeline
 
 1. ***Create Empty Release Pipeline***
