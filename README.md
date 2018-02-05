@@ -41,5 +41,5 @@ You must have previously completed one (1) of the following Hands on Labs/"Hackf
 
 ## Maintainers and Contact Information
 
-- Kevin Harris - @kevingbb
-- Ray Kao - @raykao
+- Kevin Harris - [@kevingbb](https://github.com/kevingbb)
+- Ray Kao - [@raykao](https://github.com/raykao)
