@@ -134,4 +134,6 @@ At the end of this lab, we will automate the execution of our Continuous Deploym
 
 ## Summary
 
-At this point you should have a fully functioning CI/CD process that deploys the application to your Kubernetes cluster.
+At this point you should have a basic but fully functioning CI/CD process that deploys your application to your Kubernetes cluster.  This process is triggered/started upon each code update commited to source control (Git).  This causes an automated Continuous Integration (CI) Build process to start, which will package your code into a new Docker container image(s), save the container image(s) to a Container Registry (e.g. Azure Container Registry) and build a Kubernetes yaml deployment file.  When those have tasks have been built/completed successfully, it will then automatically kick-off a Continuous Deployment (CD) Release process and deploy your updated containerized applications to your target environment/platform (i.e. Azure Container Serivces aka. ACS/AKS).
+
+We have done this to deploy to a basic development environment, but you can modify this to include multiple environments including a production scenario with minimal changes.  Please note that a proper CI/CD process should include testing, which we have not included in this lab.

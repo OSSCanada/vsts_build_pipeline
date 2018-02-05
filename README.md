@@ -38,3 +38,8 @@ You must have previously completed one (1) of the following Hands on Labs/"Hackf
 1. [Setting up VSTS](hol-content/01-setup_vsts.md)
 2. [Building a VSTS Continuous Integration Pipeline](hol-content/02-build_vsts_ci.md)
 3. [Building a VSTS Continuous Deployment Pipeline](hol-content/03-build_vsts_cd.md)
+
+## Maintainers and Contact Information
+
+- Kevin Harris - @kevingbb
+- Ray Kao - @raykao
