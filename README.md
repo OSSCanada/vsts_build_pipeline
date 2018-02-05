@@ -12,7 +12,7 @@ The labs are based upon a node.js application that allows for voting on the Just
 
 ## Prerequisite Lab
 
-You must have completed one (1) of the following Hands on Labs/"Hackfests":
+You must have previously completed one (1) of the following Hands on Labs/"Hackfests":
 1. [Microsoft Intelligent Cloud Blackbelt Team :: Hackfest](https://github.com/Azure/blackbelt-aks-hackfest): Labs 1-3
   - This HoL/hackfest is a detailed guide to deploying apps to a Kuberenetes istributed computing cluster on Azure (i.e. AKS)
 2. [OSS Canada AKS Mini Hackfest](https://github.com/OSSCanada/aks-mini-hackfest)
