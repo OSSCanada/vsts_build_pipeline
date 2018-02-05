@@ -64,10 +64,10 @@ Please note it is possible to setup VSTS to leverage other source control reposi
 * Open that newly created directory using VS Code.
     * Change directory into the new **justiceleagueapp** folder (or whatever you named that directory) 
     ```:bash 
-        # presuming you are in the directory ~/Documents/justiceleagueapp
+    # presuming you are in the directory ~/Documents/justiceleagueapp
 
-        code .
-        # (=> code "dot"/"period") to launch current app directory in VSCode to start editing files 
+    code .
+    # (=> code "dot"/"period") to launch current app directory in VSCode to start editing files 
     ``` 
 * Add a **.gitignore** file to the Repo. Copy and paste the contents from [here](../helper-files/.gitignore).
 * We will be adding one new file to the Repo. It is a **databaseload.sh** script file to help us load the Mongo DB database as part of our Release pipeline. Copy and paste the content of the **databaseload.sh** file from [here](../helper-files/databaseload.sh) into a new file called **databaseload.sh** in the helper-files directory.
