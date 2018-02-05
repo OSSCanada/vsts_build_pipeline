@@ -1,4 +1,4 @@
-# VSTS Build Pipeline on Azure Workshop
+# VSTS CI/CD Build/Release Pipeline with Azure Container Services (AKS) Workshop
 
 ## Overview
 
