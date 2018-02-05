@@ -1,8 +1,8 @@
-# VSTS CI/CD Build/Release Pipeline with Azure Container Services (AKS) Workshop
+# Visual Studio Team Services CI/CD Build/Release Pipelines with Azure Container Services (AKS) Workshop
 
 ## Overview
 
-This workshop will guide you through building a CI/CD pipeline with VSTS for use with Azure Container Service (AKS - Managed Kubernetes Service) on Azure.
+This workshop will guide you through building Continuous Integration (CI) and Continuous Deployment (CD) pipelines with Visual Studio Team Services (VSTS) for use with Azure Container Service (AKS - Managed Kubernetes Service).
 
 The labs are based upon a node.js application that allows for voting on the Justice League Superheroes. Data is stored in MongoDB backend.  This builds upon concepts from [Microsoft Intelligent Cloud Blackbelt Team :: Hackfest](https://github.com/Azure/blackbelt-aks-hackfest): Labs 1-3.
 
