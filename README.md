@@ -19,6 +19,9 @@ You must have completed one (1) of the following Hands on Labs/"Hackfests":
   - This HoL/hackfest is a subset of the [Microsoft Intelligent Cloud Blackbelt Team :: Hackfest](https://github.com/Azure/blackbelt-aks-hackfest).  It only includes steps to build apps into docker images, deploying those images to a container registry and creating an Azure Managed Kubernetes Service (i.e. AKS).
 
 ## Hands-on Lab Guide
+
+- Complete one (1) of the [Prerequisite Labs](#prerequisite-lab) first
+
 1. [Setting up VSTS](hol-content/01-setup_vsts.md)
 2. [Building a VSTS Continuous Integration Pipeline](hol-content/02-build_vsts_ci.md)
 3. [Building a VSTS Continuous Deployment Pipeline](hol-content/03-build_vsts_cd.md)
