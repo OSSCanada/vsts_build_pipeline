@@ -26,7 +26,7 @@ The general workflow/result will be as follows:
 ## Prerequisite Lab
 
 You must have previously completed one (1) of the following Hands on Labs/"Hackfests":
-1. [Microsoft Intelligent Cloud Blackbelt Team :: Hackfest](https://github.com/Azure/blackbelt-aks-hackfest): Labs 1-3
+1. [Microsoft Intelligent Cloud Blackbelt Team :: Hackfest](https://github.com/Azure/blackbelt-aks-hackfest): Labs 1-5
   - This HoL/hackfest is a detailed guide to deploying apps to a Kuberenetes istributed computing cluster on Azure (i.e. AKS)
 2. [OSS Canada AKS Mini Hackfest](https://github.com/OSSCanada/aks-mini-hackfest)
   - This HoL/hackfest is a subset of the [Microsoft Intelligent Cloud Blackbelt Team :: Hackfest](https://github.com/Azure/blackbelt-aks-hackfest).  It only includes steps to build apps into docker images, deploying those images to a container registry and creating an Azure Managed Kubernetes Service (i.e. AKS).
