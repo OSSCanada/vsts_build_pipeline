@@ -81,7 +81,7 @@ In this portion of the lab we will be creating the Continuous Deployment (CD) pi
 
 * Click on the fourth **Bash** task and update the following:
     * ***Display name***:   Load DB
-    * ***Script Path***:   Use ... and select **databaseload.sh** file from the build output.
+    * ***Script Path***:   Use the elipsis (```...```) and select **databaseload.sh** file from the build output.
     * ***Arguments***:   (Leave Blank)
 
 * Click on **Pipeline** in the navigation under **All definitions**.
