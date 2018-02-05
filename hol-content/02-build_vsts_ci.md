@@ -45,19 +45,18 @@ Please note it is possible to setup VSTS to leverage other source control reposi
 
 * We will be using the Justice League App folder from the following repository: http://github.com/azure/blackbelt-aks-hackfest
 * If you do not already have the repository cloned, please clone it to your local computer.
-
-  * ````:bash
+    ````:bash
     cd ~/Documents
     git clone git@github.com:Azure/blackbelt-aks-hackfest.git
     ````
 * Create a new Repo directory on your computer called **justiceleagueapp**.
-* ```:bash
+    ```:bash
     cd ~/Documents
     mkdir justiceleagueapp
     cd justiceleagueapp
     ```
 * Copy the **app** and **helper-files** folders from the Repo above into the newly created **justiceleagueapp** folder.
-* ```:bash
+    ```:bash
     cd ~/Documents/justiceleagueapp
     cp ~/Documents/blackbelt-aks-hackfest/linux-container/app .
     cp ~/Documents/blackbelt-aks-hackfest/linux-container/helper-files .
