@@ -72,6 +72,7 @@ Please note it is possible to setup VSTS to leverage other source control reposi
 * Add a **.gitignore** file to the Repo. Copy and paste the contents from [here](../helper-files/.gitignore).
 * We will be adding one new file to the Repo. It is a **databaseload.sh** script file to help us load the Mongo DB database as part of our Release pipeline. Copy and paste the content of the **databaseload.sh** file from [here](../helper-files/databaseload.sh) into a new file called **databaseload.sh** in the helper-files directory.
 * Using the **Source Control** navigation option in VS Code on the left-hand side, Initialize the local Repo.
+* ![empty process](img/vscode_gitinit.png)
 * Once initialized, add all the files to the Repo by entering a Comment such as **Initial commit.** and then click on the **checkmark** at the top of the window.
 * You now have a local Git Repo, next step is to push it up to VSTS.
 * ![empty process](img/jlapp_vscode.png)
@@ -121,6 +122,16 @@ git push -u origin --all
 4. **Configure Docker Build and Push DB Tasks**
 
 In this step we will be configuring the automated build of the Container Image for the database portion of the application.
+
+* Link Existing Azure Service Principal to VSTS so drop-down boxes will be automatically filled in.
+    * Click on the first of the two (2) Docker Tasks, go to the Azure Subscription and click on the **Manage** link.
+    * ![empty process](img/build_azuresubscription.png)
+    * Next, create a new Azure Resource Manager (ARM) **Service Endpoint**.
+    * ![empty process](img/build_newarmendpoint.png)
+    * Next, click on the full version option at the bottom of the screen.
+    * ![empty process](img/build_fullarmendpoint.png)
+    * Lastly, fill in the blanks using the Service Principal credential information provided as part of the lab creation.
+    * ![empty process](img/build_completedarmendpoint.png)
 
 * Click on the first of the two (2) Docker Tasks, and modify the following fields and values:
     * ***Display name:*** ```Build API Image```
